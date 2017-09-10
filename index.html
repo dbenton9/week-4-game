@@ -1,0 +1,93 @@
+<!-- Crystal Collector HW4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Crystal Collector</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- css reset -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <div class="container">
+      <h1>Crystal Collector</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Instructions -->
+    <div class="row">
+      <div class="col-12">
+        <p>
+          Put instructions here...
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Random Number -->
+      <div class="col-8">
+        <h2>Can You Match This Number:</h2>
+        <p id="randomNumber"></p>
+      </div>
+      
+      <!-- Wins and Losses -->
+      <div class="col-4">
+        <ul>
+          <li id="inline"> Wins: <p id="winCntr"></p></li>
+          <li id="inline">Losses: <p id="lossCntr"></p></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Row of Crystals -->
+    <div class="row">
+      <div class="col-12">
+        <button id="rock1"><img src="assets/images/rock1.jpeg"></button>
+        <button id="rock2"><img src="assets/images/rock1.jpeg"></button>
+        <button id="rock3"><img src="assets/images/rock1.jpeg"></button>
+        <button id="rock4"><img src="assets/images/rock1.jpeg"></button>
+      </div>
+    </div>
+
+    <!-- Total Score -->
+    <div class="row">
+      <div id="inline" class="col-12">
+        <h2>Total Score:</h2>
+        <p id="totalScore"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Page footer -->
+  <footer>
+    <div class="container">
+      Copyright &copy; 2016 David Benton
+    </div>
+  </footer>
+  
+  <!-- Page javascript/jquery -->
+  <script type="text/javascript" src="assets/javascript/game.js">
+  </script>
+
+</body>
+
+</html>
