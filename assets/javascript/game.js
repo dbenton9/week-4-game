@@ -18,6 +18,22 @@ $(document).ready(function()
   {
     totalScore = totalScore + 25;
     $("#totalScore").html(totalScore);
+      if (totalScore === goal)
+      {
+        alert("You Win");
+        winCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#winCntr").html(winCntr);
+      }
+      else if (goal < totalScore) 
+      {
+        alert("You went over " + goal + ", you lose!");
+        lossCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#lossCntr").html(lossCntr);
+      }
   });
 
   //Setting button "rock2"
@@ -25,6 +41,22 @@ $(document).ready(function()
   {
     totalScore = totalScore + 50;
     $("#totalScore").html(totalScore);
+      if (totalScore === goal)
+      {
+        alert("You Win");
+        winCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#winCntr").html(winCntr);
+      }
+      else if (goal < totalScore) 
+      {
+        alert("You went over " + goal + ", you lose!");
+        lossCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#lossCntr").html(lossCntr);
+      }
   });
 
   //Setting button "rock3"
@@ -32,6 +64,22 @@ $(document).ready(function()
   {
     totalScore = totalScore + 100;
     $("#totalScore").html(totalScore);
+      if (totalScore === goal)
+      {
+        alert("You Win");
+        winCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#winCntr").html(winCntr);
+      }
+      else if (goal < totalScore) 
+      {
+        alert("You went over " + goal + ", you lose!");
+        lossCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#lossCntr").html(lossCntr);
+      }
   });
   
   //Setting button "rock4"
@@ -43,12 +91,18 @@ $(document).ready(function()
       {
         alert("You Win");
         winCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#winCntr").html(winCntr);
       }
-
+      else if (goal < totalScore) 
+      {
+        alert("You went over " + goal + ", you lose!");
+        lossCntr++;
+        totalScore = 0;
+        $("#totalScore").html(totalScore);
+        $("#lossCntr").html(lossCntr);
+      }
   });
-
-  if (totalScore === goal){
-    alert("You Win");
-  }
 
 });
