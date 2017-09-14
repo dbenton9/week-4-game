@@ -10,7 +10,14 @@ $(document).ready(function()
   $("#lossCntr").html(lossCntr);
 
   //objective number
-  var goal = 76;
+  var goal;
+  function matchingNumber() {
+  goal = Math.floor(Math.random() * 1000);
+  }
+
+  matchingNumber();
+  console.log(goal);
+
   $("#randomNumber").html(goal);
 
   //Setting button "rock1"
@@ -25,6 +32,8 @@ $(document).ready(function()
         totalScore = 0;
         $("#totalScore").html(totalScore);
         $("#winCntr").html(winCntr);
+        matchingNumber();
+        $("#randomNumber").html(goal);
       }
       else if (goal < totalScore) 
       {
@@ -39,7 +48,7 @@ $(document).ready(function()
   //Setting button "rock2"
   $("#rock2").on("click", function()
   {
-    totalScore = totalScore + 50;
+    totalScore = totalScore + 10;
     $("#totalScore").html(totalScore);
       if (totalScore === goal)
       {
@@ -48,6 +57,8 @@ $(document).ready(function()
         totalScore = 0;
         $("#totalScore").html(totalScore);
         $("#winCntr").html(winCntr);
+        matchingNumber();
+        $("#randomNumber").html(goal);
       }
       else if (goal < totalScore) 
       {
@@ -71,6 +82,8 @@ $(document).ready(function()
         totalScore = 0;
         $("#totalScore").html(totalScore);
         $("#winCntr").html(winCntr);
+        matchingNumber();
+        $("#randomNumber").html(goal);
       }
       else if (goal < totalScore) 
       {
@@ -94,6 +107,8 @@ $(document).ready(function()
         totalScore = 0;
         $("#totalScore").html(totalScore);
         $("#winCntr").html(winCntr);
+        matchingNumber();
+        $("#randomNumber").html(goal);
       }
       else if (goal < totalScore) 
       {
