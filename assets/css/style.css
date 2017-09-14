@@ -51,6 +51,11 @@ body {
 	text-align: center;
 }
 
+img {
+	height: 160px;
+	width: 160px;
+}
+
 footer {
   width: 100%;
   padding: 15px 0;
