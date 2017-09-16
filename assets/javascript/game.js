@@ -20,104 +20,59 @@ $(document).ready(function()
 
   $("#randomNumber").html(goal);
 
+  // activate on every cyrstal selection
+  function content() 
+  {
+    $("#totalScore").html(totalScore);
+    if (totalScore === goal)
+    {
+      alert("You Win");
+      winCntr++;
+      totalScore = 0;
+      $("#totalScore").html(totalScore);
+      $("#winCntr").html(winCntr);
+      matchingNumber();
+      $("#randomNumber").html(goal);
+    }
+    else if (goal < totalScore) 
+    {
+      alert("You went over " + goal + ", you lose!");
+      lossCntr++;
+      totalScore = 0;
+      $("#totalScore").html(totalScore);
+      $("#lossCntr").html(lossCntr);
+    }
+  }
+
   //Setting button "rock1"
   $("#rock1").on("click", function()
   {
     totalScore = totalScore + 25;
-    $("#totalScore").html(totalScore);
-      if (totalScore === goal)
-      {
-        alert("You Win");
-        winCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#winCntr").html(winCntr);
-        matchingNumber();
-        $("#randomNumber").html(goal);
-      }
-      else if (goal < totalScore) 
-      {
-        alert("You went over " + goal + ", you lose!");
-        lossCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#lossCntr").html(lossCntr);
-      }
+    content();
+    
   });
 
   //Setting button "rock2"
   $("#rock2").on("click", function()
   {
     totalScore = totalScore + 10;
-    $("#totalScore").html(totalScore);
-      if (totalScore === goal)
-      {
-        alert("You Win");
-        winCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#winCntr").html(winCntr);
-        matchingNumber();
-        $("#randomNumber").html(goal);
-      }
-      else if (goal < totalScore) 
-      {
-        alert("You went over " + goal + ", you lose!");
-        lossCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#lossCntr").html(lossCntr);
-      }
+    content();    
   });
 
   //Setting button "rock3"
   $("#rock3").on("click", function()
   {
     totalScore = totalScore + 100;
-    $("#totalScore").html(totalScore);
-      if (totalScore === goal)
-      {
-        alert("You Win");
-        winCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#winCntr").html(winCntr);
-        matchingNumber();
-        $("#randomNumber").html(goal);
-      }
-      else if (goal < totalScore) 
-      {
-        alert("You went over " + goal + ", you lose!");
-        lossCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#lossCntr").html(lossCntr);
-      }
+    content();
+    
   });
   
   //Setting button "rock4"
   $("#rock4").on("click", function()
   {
     totalScore = totalScore + 1;
-    $("#totalScore").html(totalScore);
-      if (totalScore === goal)
-      {
-        alert("You Win");
-        winCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#winCntr").html(winCntr);
-        matchingNumber();
-        $("#randomNumber").html(goal);
-      }
-      else if (goal < totalScore) 
-      {
-        alert("You went over " + goal + ", you lose!");
-        lossCntr++;
-        totalScore = 0;
-        $("#totalScore").html(totalScore);
-        $("#lossCntr").html(lossCntr);
-      }
+    content();
+    
   });
 
 });
